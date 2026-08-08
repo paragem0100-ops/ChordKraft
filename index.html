@@ -3792,6 +3792,30 @@ function loadDataFromStorage() {
 
 function saveSongsToStorage() {
   localStorage.setItem('chordmap_songs', JSON.stringify(AppState.songs));
+  const currentSong = getCurrentSong();
+  if (currentSong && currentSong.title) {
+    saveSongToServer(currentSong);
+  }
+}
+
+async function saveSongToServer(song) {
+  try {
+    const response = await fetch('/api/save-song', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ song })
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(`[LocalSave] Canción guardada localmente como: ${result.fileName}`);
+    } else {
+      console.error('[LocalSave] Error al guardar la canción localmente:', result.error);
+    }
+  } catch (err) {
+    console.error('[LocalSave] Error de red al intentar guardar localmente:', err);
+  }
 }
 
 function saveSetlistsToStorage() {
