@@ -1,0 +1,31 @@
+{
+  "id": "demo-2",
+  "title": "De Música Ligera",
+  "artist": "Soda Stereo",
+  "key": "Bm",
+  "tuning": "Standard",
+  "bpm": 125,
+  "sections": [
+    {
+      "id": "sec-201",
+      "name": "RIFF INTRO",
+      "color": "#bb86fc",
+      "chords": "Bm | G | D | A",
+      "notes": "Riff distorsionado icónico de Cerati"
+    },
+    {
+      "id": "sec-202",
+      "name": "VERSO",
+      "color": "#64b5f6",
+      "chords": "Bm | G | D | A",
+      "notes": "Ella durmió al calor de las masas..."
+    },
+    {
+      "id": "sec-203",
+      "name": "CORO",
+      "color": "#03dac6",
+      "chords": "Bm | G | D | A",
+      "notes": "De aquel amor de música ligera... ¡Corte final!"
+    }
+  ]
+}
