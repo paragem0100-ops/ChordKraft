@@ -908,6 +908,30 @@
       transform: scale(0.98);
     }
 
+    .btn-new-song-repertoire {
+      background: linear-gradient(135deg, var(--accent-purple) 0%, color-mix(in srgb, var(--accent-purple) 70%, white) 100%);
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px var(--accent-purple-glow);
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    .btn-new-song-repertoire:hover {
+      box-shadow: 0 0 16px var(--accent-purple-glow);
+      transform: translateY(-1px);
+    }
+    .btn-new-song-repertoire:active {
+      transform: scale(0.98);
+    }
+
     .song-list {
       flex: 1;
       overflow-y: auto;
@@ -2489,6 +2513,20 @@
       box-shadow: 0 0 12px var(--accent-purple-glow);
     }
 
+    .repertoire-letter-header {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--accent-purple);
+      text-shadow: 0 0 10px var(--accent-purple-glow);
+      margin-top: 15px;
+      margin-bottom: 5px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid rgba(168, 85, 247, 0.2);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: 'Outfit', sans-serif;
+    }
+
     /* Split Stage Layout for Live Mode */
     .live-content {
       flex: 1;
@@ -3234,6 +3272,9 @@
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" id="repertoireSearchInput" class="repertoire-search-input" placeholder="Buscar por título, artista o tono..." autocorrect="off" autocapitalize="none" />
         </div>
+        <button class="btn-new-song-repertoire" id="btnNewSongRepertoire">
+          <i class="fa-solid fa-plus"></i> Nueva Canción
+        </button>
         <button class="repertoire-btn-close" id="btnCloseRepertoire" title="Volver al Menú Principal" aria-label="Volver al Menú Principal">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -4627,6 +4668,15 @@ function initEventListeners() {
   const btnCloseRepertoire = document.getElementById('btnCloseRepertoire');
   if (btnCloseRepertoire) btnCloseRepertoire.addEventListener('click', closeRepertoire);
 
+  const btnNewSongRepertoire = document.getElementById('btnNewSongRepertoire');
+  if (btnNewSongRepertoire) {
+    btnNewSongRepertoire.addEventListener('click', () => {
+      const overlay = document.getElementById('repertoireListOverlay');
+      if (overlay) overlay.classList.remove('active');
+      createNewSong();
+    });
+  }
+
   const repSearchInput = document.getElementById('repertoireSearchInput');
   if (repSearchInput) {
     repSearchInput.addEventListener('input', (e) => {
@@ -4703,7 +4753,21 @@ function renderRepertoireGrid(filterText = '') {
   // Ordenar alfabéticamente por título de la canción
   const sorted = [...filtered].sort((a, b) => (a.title || '').localeCompare(b.title || '', 'es', { sensitivity: 'base' }));
 
+  let lastLetter = '';
+
   sorted.forEach(song => {
+    const firstLetter = (song.title || '').trim().charAt(0).toUpperCase();
+    const currentLetter = /^[A-Z]$/.test(firstLetter) ? firstLetter : '#';
+
+    // Si la letra ha cambiado, agregar el separador alfabético
+    if (currentLetter !== lastLetter) {
+      lastLetter = currentLetter;
+      const letterHeader = document.createElement('div');
+      letterHeader.className = 'repertoire-letter-header';
+      letterHeader.textContent = lastLetter;
+      container.appendChild(letterHeader);
+    }
+
     const card = document.createElement('div');
     card.className = `repertoire-song-card ${song.id === AppState.currentSongId ? 'active' : ''}`;
     card.innerHTML = `
