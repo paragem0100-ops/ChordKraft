@@ -1,0 +1,38 @@
+{
+  "id": "demo-1",
+  "title": "Hotel California",
+  "artist": "Eagles",
+  "key": "Bm",
+  "tuning": "Standard",
+  "bpm": 74,
+  "sections": [
+    {
+      "id": "sec-1",
+      "name": "INTRO",
+      "color": "#bb86fc",
+      "chords": "Bm | F#7 | A | E | G | D | Em | F#7",
+      "notes": "Entra guitarra acústica sola con arpegio"
+    },
+    {
+      "id": "sec-2",
+      "name": "VERSO 1",
+      "color": "#64b5f6",
+      "chords": "Bm | F#7 | A | E\nG | D | Em | F#7 | C",
+      "notes": "On a dark desert highway, cool wind in my hair"
+    },
+    {
+      "id": "sec-3",
+      "name": "CORO",
+      "color": "#03dac6",
+      "chords": "G | D | F#7 | Bm\nG | D | Em | F#7",
+      "notes": "Welcome to the Hotel California... Entra bajo y batería fuerte"
+    },
+    {
+      "id": "sec-4",
+      "name": "SOLO GUITARRA",
+      "color": "#ffb74d",
+      "chords": "Bm | F#7 | A | E | G | D | Em | F#7",
+      "notes": "Duelo final de guitarras"
+    }
+  ]
+}
