@@ -1,0 +1,27 @@
+:root {
+  /* Horror Cósmico Palette (Eldritch Void & Cosmic Glow) */
+  --bg-dark: #07040e;
+  --panel-bg: #0e071c;
+  --card-bg: #15092a;
+  --card-border: #351a63;
+  --input-bg: #1c0c3b;
+  --input-border: #4d248c;
+  
+  --text-main: #f5edff;
+  --text-muted: #c9abf5;
+  --text-dim: #8867bd;
+  
+  --accent-purple: #c084fc;
+  --accent-purple-glow: rgba(192, 132, 252, 0.45);
+  --accent-cyan: #22d3ee;
+  --accent-cyan-glow: rgba(34, 211, 238, 0.45);
+  --accent-rose: #f43f5e;
+  --accent-amber: #fbbf24;
+  --accent-green: #10b981;
+  --accent-blue: #818cf8;
+
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-chords: 'JetBrains Mono', monospace;
+
+  --sidebar-width: 320px;
+}
