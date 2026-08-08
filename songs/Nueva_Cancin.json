@@ -1,0 +1,17 @@
+{
+  "id": "song-1786156371929",
+  "title": "Nueva Canción",
+  "artist": "Artista",
+  "key": "C",
+  "tuning": "Standard",
+  "bpm": 120,
+  "sections": [
+    {
+      "id": "sec-1786156371929",
+      "name": "INTRO",
+      "color": "#bb86fc",
+      "chords": "C | G | Am | F",
+      "notes": "Entrada suave"
+    }
+  ]
+}
