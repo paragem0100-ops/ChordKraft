@@ -46,6 +46,11 @@
       --accent-green: #10b981;
       --accent-blue: #818cf8;
 
+      --theme-border-radius: 14px;
+      --theme-border-style: solid;
+      --theme-border-width: 1.5px;
+      --theme-card-shadow: 0 6px 16px rgba(0,0,0,0.25);
+
       --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-chords: 'JetBrains Mono', monospace;
 
@@ -116,22 +121,14 @@
 
     /* 🩸 Vampiro Noche */
     body[data-theme="vampire"] .theme-bg-wallpaper {
-      background-image:
-        repeating-linear-gradient(45deg,  transparent, transparent 40px, rgba(220,38,38,0.04) 40px, rgba(220,38,38,0.04) 41px),
-        repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(192,132,252,0.03) 40px, rgba(192,132,252,0.03) 41px),
-        radial-gradient(ellipse 90% 60% at 15% 15%, rgba(76,5,25,0.55) 0%, transparent 70%),
-        radial-gradient(ellipse 70% 70% at 85% 85%, rgba(46,16,101,0.45) 0%, transparent 70%);
-      opacity: 1;
+      background-image: url('assets/images/vampire_gothic_bg.jpg');
+      opacity: 0.38;
     }
 
     /* 🎃 Halloween Spooky */
     body[data-theme="spooky"] .theme-bg-wallpaper {
-      background-image:
-        repeating-linear-gradient(60deg,  transparent, transparent 50px, rgba(249,115,22,0.04) 50px, rgba(249,115,22,0.04) 51px),
-        repeating-linear-gradient(-60deg, transparent, transparent 50px, rgba(168,85,247,0.03) 50px, rgba(168,85,247,0.03) 51px),
-        radial-gradient(ellipse 80% 60% at 10% 20%, rgba(67,20,7,0.6) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 80% at 90% 80%, rgba(59,7,100,0.5) 0%, transparent 70%);
-      opacity: 1;
+      background-image: url('assets/images/spooky_forest_bg.jpg');
+      opacity: 0.40;
     }
 
     /* 🪄 Magia Arcana */
@@ -158,12 +155,8 @@
 
     /* 🌌 Galaxia Nebulosa */
     body[data-theme="galaxy"] .theme-bg-wallpaper {
-      background-image:
-        radial-gradient(ellipse 40% 30% at 20% 30%, rgba(56,189,248,0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 40% at 75% 65%, rgba(217,70,239,0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 30% 30% at 55% 20%, rgba(56,189,248,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 40% 80%, rgba(217,70,239,0.12) 0%, transparent 60%);
-      opacity: 1;
+      background-image: url('assets/images/galaxy_nebula_bg.jpg');
+      opacity: 0.40;
     }
 
     /* ☄️ Cosmonauta Deep */
@@ -194,11 +187,8 @@
 
     /* 👾 Matrix Code */
     body[data-theme="matrix"] .theme-bg-wallpaper {
-      background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(16,185,129,0.06) 24px, rgba(16,185,129,0.06) 25px),
-        repeating-linear-gradient(90deg, transparent, transparent 16px, rgba(34,197,94,0.04) 16px, rgba(34,197,94,0.04) 17px),
-        radial-gradient(ellipse 100% 80% at 50% 0%, rgba(6,78,59,0.4) 0%, transparent 70%);
-      opacity: 1;
+      background-image: url('assets/images/matrix_code_bg.jpg');
+      opacity: 0.40;
     }
 
     /* ⚡ Cyber Neon */
@@ -218,6 +208,30 @@
         radial-gradient(ellipse 60% 50% at 70% 60%, rgba(139,233,253,0.1) 0%, transparent 70%),
         repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,121,198,0.02) 60px, rgba(255,121,198,0.02) 61px);
       opacity: 1;
+    }
+
+    /* 🌲 Bosque Profundo */
+    body[data-theme="forest"] .theme-bg-wallpaper {
+      background-image: url('assets/images/deep_forest_bg.jpg');
+      opacity: 0.38;
+    }
+
+    /* 🌊 Abismo Marino */
+    body[data-theme="ocean"] .theme-bg-wallpaper {
+      background-image: url('assets/images/abyssal_ocean_bg.jpg');
+      opacity: 0.40;
+    }
+
+    /* 🔲 Monocromático Brutalista */
+    body[data-theme="mono"] .theme-bg-wallpaper {
+      background-image: url('assets/images/brutalist_mono_bg.jpg');
+      opacity: 0.35;
+    }
+
+    /* 📜 Pergamino Vintage */
+    body[data-theme="sepia"] .theme-bg-wallpaper {
+      background-image: url('assets/images/vintage_parchment_bg.jpg');
+      opacity: 0.38;
     }
 
     /* Ensure watermark sits above wallpaper */
@@ -243,6 +257,11 @@
       --accent-purple-glow: rgba(239, 68, 68, 0.55);
       --accent-cyan: #f59e0b; /* Infernal Gold Flame */
       --accent-cyan-glow: rgba(245, 158, 11, 0.5);
+
+      --theme-border-radius: 6px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 6px 20px rgba(239, 68, 68, 0.2);
       
       background: radial-gradient(circle at 10% 10%, #3b070f 0%, #0a0204 50%), radial-gradient(circle at 90% 90%, #200307 0%, #0a0204 60%), #0a0204;
     }
@@ -269,6 +288,11 @@
       --accent-purple-glow: rgba(255, 0, 127, 0.6);
       --accent-cyan: #00ffcc; /* Arcade Pixel Cyan */
       --accent-cyan-glow: rgba(0, 255, 204, 0.6);
+
+      --theme-border-radius: 0px;
+      --theme-border-style: solid;
+      --theme-border-width: 4px;
+      --theme-card-shadow: 6px 6px 0px rgba(255, 0, 127, 0.3);
       
       background: radial-gradient(circle at 10% 10%, #300959 0%, #0a0814 50%), radial-gradient(circle at 90% 90%, #053b38 0%, #0a0814 60%), #0a0814;
     }
@@ -294,6 +318,11 @@
       --accent-purple-glow: rgba(56, 189, 248, 0.45);
       --accent-cyan: #facc15;
       --accent-cyan-glow: rgba(250, 204, 21, 0.45);
+
+      --theme-border-radius: 6px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 0 18px rgba(56, 189, 248, 0.3);
       
       background: radial-gradient(circle at 10% 10%, #032b45 0%, #060913 50%), radial-gradient(circle at 90% 90%, #1e1b4b 0%, #060913 60%), #060913;
     }
@@ -318,6 +347,12 @@
       --accent-purple-glow: rgba(34, 197, 94, 0.6);
       --accent-cyan: #a855f7;
       --accent-cyan-glow: rgba(168, 85, 247, 0.55);
+
+      --theme-border-radius: 20px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 6px 20px rgba(34, 197, 94, 0.15);
+      
       background: radial-gradient(circle at 10% 10%, #063d16 0%, #040d06 50%), radial-gradient(circle at 90% 90%, #2f0743 0%, #040d06 60%), #040d06;
     }
     body[data-theme="slime"] .cosmic-bg-watermark {
@@ -340,6 +375,12 @@
       --accent-purple-glow: rgba(220, 38, 38, 0.6);
       --accent-cyan: #c084fc;
       --accent-cyan-glow: rgba(192, 132, 252, 0.55);
+
+      --theme-border-radius: 0px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 6px 24px rgba(120, 5, 30, 0.3);
+      
       background: radial-gradient(circle at 10% 10%, #4c0519 0%, #0a0307 50%), radial-gradient(circle at 90% 90%, #2e1065 0%, #0a0307 60%), #0a0307;
     }
     body[data-theme="vampire"] .cosmic-bg-watermark {
@@ -362,6 +403,12 @@
       --accent-purple-glow: rgba(249, 115, 22, 0.6);
       --accent-cyan: #a855f7;
       --accent-cyan-glow: rgba(168, 85, 247, 0.55);
+
+      --theme-border-radius: 16px;
+      --theme-border-style: dashed;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 6px 20px rgba(249, 115, 22, 0.15);
+      
       background: radial-gradient(circle at 10% 10%, #431407 0%, #0f0803 50%), radial-gradient(circle at 90% 90%, #3b0764 0%, #0f0803 60%), #0f0803;
     }
     body[data-theme="spooky"] .cosmic-bg-watermark {
@@ -384,6 +431,12 @@
       --accent-purple-glow: rgba(139, 92, 246, 0.6);
       --accent-cyan: #f59e0b;
       --accent-cyan-glow: rgba(245, 158, 11, 0.55);
+
+      --theme-border-radius: 14px;
+      --theme-border-style: double;
+      --theme-border-width: 3px;
+      --theme-card-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+      
       background: radial-gradient(circle at 10% 10%, #2e1065 0%, #080514 50%), radial-gradient(circle at 90% 90%, #451a03 0%, #080514 60%), #080514;
     }
     body[data-theme="arcane"] .cosmic-bg-watermark {
@@ -406,6 +459,12 @@
       --accent-purple-glow: rgba(16, 185, 129, 0.6);
       --accent-cyan: #eab308;
       --accent-cyan-glow: rgba(234, 179, 8, 0.55);
+
+      --theme-border-radius: 10px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 6px 20px rgba(6, 78, 59, 0.2);
+      
       background: radial-gradient(circle at 10% 10%, #064e3b 0%, #040d09 50%), radial-gradient(circle at 90% 90%, #422006 0%, #040d09 60%), #040d09;
     }
     body[data-theme="epic"] .cosmic-bg-watermark {
@@ -428,6 +487,12 @@
       --accent-purple-glow: rgba(217, 119, 6, 0.6);
       --accent-cyan: #f59e0b;
       --accent-cyan-glow: rgba(245, 158, 11, 0.55);
+
+      --theme-border-radius: 4px;
+      --theme-border-style: ridge;
+      --theme-border-width: 3px;
+      --theme-card-shadow: 0 6px 20px rgba(180, 83, 9, 0.2);
+      
       background: radial-gradient(circle at 10% 10%, #451a03 0%, #0f0b05 50%), radial-gradient(circle at 90% 90%, #271a0c 0%, #0f0b05 60%), #0f0b05;
     }
     body[data-theme="steampunk"] .cosmic-bg-watermark {
@@ -450,6 +515,12 @@
       --accent-purple-glow: rgba(56, 189, 248, 0.6);
       --accent-cyan: #d946ef;
       --accent-cyan-glow: rgba(217, 70, 239, 0.55);
+
+      --theme-border-radius: 18px;
+      --theme-border-style: solid;
+      --theme-border-width: 1.5px;
+      --theme-card-shadow: 0 0 25px rgba(217, 70, 239, 0.25);
+      
       background: radial-gradient(circle at 10% 10%, #0c4a6e 0%, #030814 50%), radial-gradient(circle at 90% 90%, #701a75 0%, #030814 60%), #030814;
     }
     body[data-theme="galaxy"] .cosmic-bg-watermark {
@@ -472,6 +543,12 @@
       --accent-purple-glow: rgba(255, 107, 0, 0.6);
       --accent-cyan: #3b82f6;
       --accent-cyan-glow: rgba(59, 130, 246, 0.55);
+
+      --theme-border-radius: 24px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+      
       background: radial-gradient(circle at 10% 10%, #1e3a8a 0%, #050811 50%), radial-gradient(circle at 90% 90%, #7c2d12 0%, #050811 60%), #050811;
     }
     body[data-theme="astro"] .cosmic-bg-watermark {
@@ -494,6 +571,12 @@
       --accent-purple-glow: rgba(236, 72, 153, 0.6);
       --accent-cyan: #06b6d4;
       --accent-cyan-glow: rgba(6, 182, 212, 0.55);
+
+      --theme-border-radius: 8px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+      
       background: radial-gradient(circle at 10% 10%, #831843 0%, #0f051d 50%), radial-gradient(circle at 90% 90%, #312e81 0%, #0f051d 60%), #0f051d;
     }
     body[data-theme="synthwave"] .cosmic-bg-watermark {
@@ -516,6 +599,12 @@
       --accent-purple-glow: rgba(16, 185, 129, 0.6);
       --accent-cyan: #22c55e;
       --accent-cyan-glow: rgba(34, 197, 94, 0.55);
+
+      --theme-border-radius: 0px;
+      --theme-border-style: solid;
+      --theme-border-width: 1.5px;
+      --theme-card-shadow: 0 0 15px rgba(34, 197, 94, 0.25);
+      
       background: radial-gradient(circle at 10% 10%, #064e3b 0%, #020c06 50%), radial-gradient(circle at 90% 90%, #022c22 0%, #020c06 60%), #020c06;
     }
     body[data-theme="matrix"] .cosmic-bg-watermark {
@@ -544,6 +633,11 @@
       --accent-purple-glow: rgba(255, 121, 198, 0.45);
       --accent-cyan: #8be9fd;
       --accent-cyan-glow: rgba(139, 233, 253, 0.45);
+
+      --theme-border-radius: 12px;
+      --theme-border-style: solid;
+      --theme-border-width: 1.5px;
+      --theme-card-shadow: 0 4px 12px rgba(0,0,0,0.4);
       
       background: #121318;
     }
@@ -551,6 +645,122 @@
     body[data-theme="studio"] .cosmic-bg-watermark {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Ccircle cx='250' cy='250' r='220' fill='none' stroke='%23ff79c6' stroke-width='4'/%3E%3Ccircle cx='250' cy='250' r='160' fill='none' stroke='%238be9fd' stroke-width='3' stroke-dasharray='6 10'/%3E%3Ccircle cx='250' cy='250' r='80' fill='none' stroke='%23ff79c6' stroke-width='5'/%3E%3Ccircle cx='250' cy='250' r='20' fill='%238be9fd'/%3E%3C/svg%3E") !important;
       filter: drop-shadow(0 0 25px rgba(255, 121, 198, 0.45)) !important;
+    }
+
+    body[data-theme="forest"] {
+      --bg-dark: #040906;
+      --panel-bg: #09130d;
+      --card-bg: #102418;
+      --card-border: #15803d;
+      --input-bg: #143522;
+      --input-border: #16a34a;
+      
+      --text-main: #f0fdf4;
+      --text-muted: #86efac;
+      --text-dim: #166534;
+      
+      --accent-purple: #22c55e;
+      --accent-purple-glow: rgba(34, 197, 94, 0.45);
+      --accent-cyan: #eab308;
+      --accent-cyan-glow: rgba(234, 179, 8, 0.45);
+
+      --theme-border-radius: 14px;
+      --theme-border-style: solid;
+      --theme-border-width: 2px;
+      --theme-card-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
+      
+      background: radial-gradient(circle at 10% 10%, #052e16 0%, #040906 50%), radial-gradient(circle at 90% 90%, #022c22 0%, #040906 60%), #040906;
+    }
+    body[data-theme="forest"] .cosmic-bg-watermark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cpath d='M250,50 L380,260 L310,260 L400,380 L100,380 L190,260 L120,260 Z M230,380 L270,380 L270,450 L230,450 Z' fill='none' stroke='%2322c55e' stroke-width='4'/%3E%3C/svg%3E") !important;
+      filter: drop-shadow(0 0 28px rgba(34, 197, 94, 0.5)) !important;
+    }
+
+    body[data-theme="ocean"] {
+      --bg-dark: #020713;
+      --panel-bg: #040f24;
+      --card-bg: #06193b;
+      --card-border: #0284c7;
+      --input-bg: #092454;
+      --input-border: #0ea5e9;
+      
+      --text-main: #f0f9ff;
+      --text-muted: #7dd3fc;
+      --text-dim: #0369a1;
+      
+      --accent-purple: #0284c7;
+      --accent-purple-glow: rgba(2, 132, 199, 0.45);
+      --accent-cyan: #38bdf8;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.45);
+
+      --theme-border-radius: 16px;
+      --theme-border-style: solid;
+      --theme-border-width: 1.5px;
+      --theme-card-shadow: 0 4px 20px rgba(14, 165, 233, 0.2);
+      
+      background: radial-gradient(circle at 10% 10%, #075985 0%, #020713 50%), radial-gradient(circle at 90% 90%, #082f49 0%, #020713 60%), #020713;
+    }
+    body[data-theme="ocean"] .cosmic-bg-watermark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cpath d='M250,50 C120,50 50,150 50,250 C50,330 100,380 180,380 C230,380 270,330 270,280 C270,230 230,190 180,190 C150,190 120,210 120,250 C120,280 140,300 170,300 C190,300 200,280 200,270' fill='none' stroke='%2338bdf8' stroke-width='4'/%3E%3C/svg%3E") !important;
+      filter: drop-shadow(0 0 28px rgba(56, 189, 248, 0.5)) !important;
+    }
+
+    body[data-theme="mono"] {
+      --bg-dark: #0f1012;
+      --panel-bg: #16171b;
+      --card-bg: #1d1e22;
+      --card-border: #4b5563;
+      --input-bg: #2b2c34;
+      --input-border: #9ca3af;
+      
+      --text-main: #f9fafb;
+      --text-muted: #d1d5db;
+      --text-dim: #6b7280;
+      
+      --accent-purple: #f3f4f6;
+      --accent-purple-glow: rgba(243, 244, 246, 0.3);
+      --accent-cyan: #9ca3af;
+      --accent-cyan-glow: rgba(156, 163, 175, 0.3);
+
+      --theme-border-radius: 0px;
+      --theme-border-style: solid;
+      --theme-border-width: 3px;
+      --theme-card-shadow: 4px 4px 0px #ffffff;
+      
+      background: #0f1012;
+    }
+    body[data-theme="mono"] .cosmic-bg-watermark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect x='100' y='100' width='300' height='300' fill='none' stroke='%23d1d5db' stroke-width='6'/%3E%3Crect x='150' y='150' width='200' height='200' fill='none' stroke='%236b7280' stroke-width='4'/%3E%3Crect x='200' y='200' width='100' height='100' fill='none' stroke='%23f9fafb' stroke-width='2'/%3E%3C/svg%3E") !important;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) !important;
+    }
+
+    body[data-theme="sepia"] {
+      --bg-dark: #120e08;
+      --panel-bg: #1c160e;
+      --card-bg: #292014;
+      --card-border: #78350f;
+      --input-bg: #362b1c;
+      --input-border: #92400e;
+      
+      --text-main: #fef3c7;
+      --text-muted: #fcd34d;
+      --text-dim: #b45309;
+      
+      --accent-purple: #f59e0b;
+      --accent-purple-glow: rgba(245, 158, 11, 0.4);
+      --accent-cyan: #d97706;
+      --accent-cyan-glow: rgba(217, 119, 6, 0.4);
+
+      --theme-border-radius: 8px;
+      --theme-border-style: ridge;
+      --theme-border-width: 2.5px;
+      --theme-card-shadow: 0 4px 15px rgba(120, 53, 15, 0.2);
+      
+      background: radial-gradient(circle at 10% 10%, #451a03 0%, #120e08 50%), radial-gradient(circle at 90% 90%, #1e1b10 0%, #120e08 60%), #120e08;
+    }
+    body[data-theme="sepia"] .cosmic-bg-watermark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cpath d='M120,80 L380,80 C400,80 400,100 400,120 L400,380 C400,400 400,420 380,420 L120,420 C100,420 100,400 100,380 L100,120 C100,100 100,80 120,80 Z M150,140 L350,140 M150,200 L350,200 M150,260 L350,260 M150,320 L280,320' fill='none' stroke='%23f59e0b' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+      filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.4)) !important;
     }
 
     /* PWA Container */
@@ -736,9 +946,9 @@
 
     .song-item {
       padding: 10px 12px;
-      border-radius: 12px;
+      border-radius: var(--theme-border-radius);
       background: var(--card-bg);
-      border: 1.5px solid var(--card-border);
+      border: var(--theme-border-width) var(--theme-border-style) var(--card-border);
       margin-bottom: 8px;
       display: flex;
       align-items: center;
@@ -1438,15 +1648,15 @@
     /* Modular Section Card */
     .section-card {
       background: var(--card-bg);
-      border: 1px solid var(--card-border);
+      border: var(--theme-border-width) var(--theme-border-style) var(--card-border);
       border-left: 6px solid var(--accent-purple);
-      border-radius: 14px;
+      border-radius: var(--theme-border-radius);
       padding: 18px 20px;
       display: flex;
       flex-direction: column;
       gap: 12px;
       position: relative;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      box-shadow: var(--theme-card-shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -1656,12 +1866,12 @@
       align-items: center;
       gap: 6px;
       background: linear-gradient(145deg, var(--input-bg) 0%, var(--card-bg) 100%);
-      border: 2px solid var(--input-border);
-      border-radius: 12px;
+      border: var(--theme-border-width) var(--theme-border-style) var(--input-border);
+      border-radius: var(--theme-border-radius);
       padding: 6px 10px;
       position: relative;
       transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--theme-card-shadow);
     }
 
     .measure-box:focus-within {
@@ -1674,7 +1884,7 @@
       align-items: center;
       background: rgba(34, 211, 238, 0.14);
       border: 1.8px solid var(--accent-cyan);
-      border-radius: 8px;
+      border-radius: calc(var(--theme-border-radius) - 4px);
       padding-right: 4px;
       transition: all 0.15s ease;
     }
@@ -1963,16 +2173,14 @@
     /* 🩸 Vampiro – carmesí y violeta intensos */
     body[data-theme="vampire"] .live-mode-wallpaper {
       background-image:
-        radial-gradient(ellipse 100% 70% at 10% 10%, rgba(120,5,30,0.75) 0%, transparent 65%),
-        radial-gradient(ellipse 80% 80% at 90% 90%, rgba(60,10,120,0.65) 0%, transparent 65%),
-        repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(220,38,38,0.06) 40px, rgba(220,38,38,0.06) 41px);
+        linear-gradient(rgba(10,3,7,0.48), rgba(10,3,7,0.48)),
+        url('assets/images/vampire_gothic_bg.jpg');
     }
     /* 🎃 Spooky – naranja y morado contrastantes */
     body[data-theme="spooky"] .live-mode-wallpaper {
       background-image:
-        radial-gradient(ellipse 90% 70% at 5% 10%, rgba(100,25,5,0.75) 0%, transparent 65%),
-        radial-gradient(ellipse 70% 90% at 95% 90%, rgba(80,5,140,0.65) 0%, transparent 65%),
-        repeating-linear-gradient(60deg, transparent, transparent 50px, rgba(249,115,22,0.07) 50px, rgba(249,115,22,0.07) 51px);
+        linear-gradient(rgba(15,8,3,0.46), rgba(15,8,3,0.46)),
+        url('assets/images/spooky_forest_bg.jpg');
     }
     /* 🪄 Arcana – violeta mágico intenso */
     body[data-theme="arcane"] .live-mode-wallpaper {
@@ -1996,10 +2204,8 @@
     /* 🌌 Galaxy – nebulosa cyan/magenta brillante */
     body[data-theme="galaxy"] .live-mode-wallpaper {
       background-image:
-        radial-gradient(ellipse 55% 45% at 15% 25%, rgba(56,189,248,0.5) 0%, transparent 65%),
-        radial-gradient(ellipse 65% 55% at 80% 70%, rgba(217,70,239,0.5) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 35% at 55% 15%, rgba(56,189,248,0.3) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 35% 85%, rgba(217,70,239,0.3) 0%, transparent 60%);
+        linear-gradient(rgba(5,5,15,0.48), rgba(5,5,15,0.48)),
+        url('assets/images/galaxy_nebula_bg.jpg');
     }
     /* ☄️ Astro – naranja solar + azul espacial */
     body[data-theme="astro"] .live-mode-wallpaper {
@@ -2026,10 +2232,8 @@
     /* 👾 Matrix – lluvia de código verde */
     body[data-theme="matrix"] .live-mode-wallpaper {
       background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(16,185,129,0.16) 22px, rgba(16,185,129,0.16) 24px),
-        repeating-linear-gradient(90deg, transparent, transparent 14px, rgba(34,197,94,0.10) 14px, rgba(34,197,94,0.10) 15px),
-        radial-gradient(ellipse 110% 80% at 50% 0%, rgba(6,78,59,0.6) 0%, transparent 65%),
-        radial-gradient(ellipse 60% 60% at 50% 100%, rgba(16,185,129,0.25) 0%, transparent 60%);
+        linear-gradient(rgba(2,10,5,0.48), rgba(2,10,5,0.48)),
+        url('assets/images/matrix_code_bg.jpg');
     }
     /* ⚡ Cyber – circuitos diagonales neón */
     body[data-theme="cyber"] .live-mode-wallpaper {
@@ -2045,6 +2249,30 @@
         radial-gradient(ellipse 65% 55% at 25% 35%, rgba(255,121,198,0.35) 0%, transparent 65%),
         radial-gradient(ellipse 75% 65% at 75% 65%, rgba(139,233,253,0.35) 0%, transparent 65%),
         repeating-linear-gradient(90deg, transparent, transparent 55px, rgba(255,121,198,0.05) 55px, rgba(255,121,198,0.05) 56px);
+    }
+    /* 🌲 Bosque Profundo */
+    body[data-theme="forest"] .live-mode-wallpaper {
+      background-image:
+        linear-gradient(rgba(4,13,6,0.48), rgba(4,13,6,0.48)),
+        url('assets/images/deep_forest_bg.jpg');
+    }
+    /* 🌊 Abismo Marino */
+    body[data-theme="ocean"] .live-mode-wallpaper {
+      background-image:
+        linear-gradient(rgba(2,10,24,0.48), rgba(2,10,24,0.48)),
+        url('assets/images/abyssal_ocean_bg.jpg');
+    }
+    /* 🔲 Monocromático Brutalista */
+    body[data-theme="mono"] .live-mode-wallpaper {
+      background-image:
+        linear-gradient(rgba(10,10,12,0.48), rgba(10,10,12,0.48)),
+        url('assets/images/brutalist_mono_bg.jpg');
+    }
+    /* 📜 Pergamino Vintage */
+    body[data-theme="sepia"] .live-mode-wallpaper {
+      background-image:
+        linear-gradient(rgba(18,14,8,0.48), rgba(18,14,8,0.48)),
+        url('assets/images/vintage_parchment_bg.jpg');
     }
 
     .live-floating-bg {
@@ -2750,6 +2978,12 @@
               <option value="cyber">⚡ Cyber Neon</option>
               <option value="studio">🌙 Dark Studio</option>
             </optgroup>
+            <optgroup label="── 🌅 Naturaleza & Vintage ──">
+              <option value="forest">🌲 Deep Forest</option>
+              <option value="ocean">🌊 Abyssal Ocean</option>
+              <option value="mono">🔲 Mono Brutalist</option>
+              <option value="sepia">📜 Pergamino Vintage</option>
+            </optgroup>
           </select>
         </div>
 
@@ -3031,10 +3265,10 @@
               <option value="cyber">⚡ Cyber Neon</option>
             </optgroup>
             <optgroup label="── 🌅 Naturaleza & Vintage ──">
-              <option value="forest">🌲 Bosque Profundo</option>
-              <option value="ocean">🌊 Abismo Marino</option>
+              <option value="forest">🌲 Deep Forest</option>
+              <option value="ocean">🌊 Abyssal Ocean</option>
+              <option value="mono">🔲 Mono Brutalist</option>
               <option value="sepia">📜 Pergamino Vintage</option>
-              <option value="mono">🔲 Monocromático Brutalista</option>
             </optgroup>
           </select>
         </div>
@@ -3925,7 +4159,33 @@ const THEME_SYMBOLS = {
   synthwave: ['🤖', '🕶️', '🕹️', '🌴', '🌆', '⚡'],
   matrix: ['👾', '⌨️', '💻', '🟢', '🔓', '⚡'],
   cyber: ['⚡', '🌐', '🤖', '💾', '💎', '🛸'],
-  studio: ['🎧', '🎙️', '🎵', '🎶', '🎛️', '🎷']
+  studio: ['🎧', '🎙️', '🎵', '🎶', '🎛️', '🎷'],
+  forest: ['🌲', '🍁', '🍃', '🦌', '🍄', '🦉'],
+  ocean: ['🌊', '🦈', '🐙', '🐬', '🐚', '🦀'],
+  mono: ['🔳', '🔲', '⬛', '⬜', '📐', '🧱'],
+  sepia: ['📜', '🖋️', '📖', '🎻', '🎻', '🕯️']
+};
+
+const THEME_ICONS = {
+  cosmic: 'fa-eye',
+  satanic: 'fa-skull',
+  slime: 'fa-biohazard',
+  vampire: 'fa-dungeon',
+  spooky: 'fa-ghost',
+  arcane: 'fa-wand-magic-sparkles',
+  epic: 'fa-dragon',
+  steampunk: 'fa-gear',
+  galaxy: 'fa-user-astronaut',
+  astro: 'fa-meteor',
+  retro: 'fa-gamepad',
+  synthwave: 'fa-robot',
+  matrix: 'fa-terminal',
+  cyber: 'fa-bolt',
+  studio: 'fa-sliders',
+  forest: 'fa-tree',
+  ocean: 'fa-water',
+  mono: 'fa-cube',
+  sepia: 'fa-book-open'
 };
 
 function applyTheme(themeName) {
@@ -3935,6 +4195,16 @@ function applyTheme(themeName) {
 
   const sel = document.getElementById('themeSelect');
   if (sel) sel.value = AppState.theme;
+
+  const settingsSel = document.getElementById('settingsThemeSelect');
+  if (settingsSel) settingsSel.value = AppState.theme;
+
+  // Actualizar el icono de inicio según la temática
+  const homeIcon = document.querySelector('.home-logo-circle i');
+  if (homeIcon) {
+    const iconClass = THEME_ICONS[AppState.theme] || 'fa-guitar';
+    homeIcon.className = `fa-solid ${iconClass} home-guitar-icon`;
+  }
 
   const symbols = THEME_SYMBOLS[AppState.theme] || THEME_SYMBOLS.cosmic;
   const floatItems = document.querySelectorAll('.cosmic-float-item');
